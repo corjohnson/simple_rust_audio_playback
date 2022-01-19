@@ -17,7 +17,7 @@ async fn play_audio() {
     let (_stream, stream_handle) = rodio::OutputStream::try_default().unwrap();
     let file = File::open("examples_music.wav").unwrap();
     let music = stream_handle.play_once(BufReader::new(file)).unwrap();
-    music.set_volume(8.0);
+    music.set_volume(1.0);
     thread::sleep(Duration::from_secs(10));
 }
 
